@@ -84,6 +84,10 @@ private let itemFormatter: DateFormatter = {
     return formatter
 }()
 
+
+
+
+//以降プレビュー
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
