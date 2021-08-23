@@ -21,7 +21,7 @@ struct ContentView: View {
             // 取得したデータをリスト表示
             List {
                 ForEach(items) { item in
-                    Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                    Text("\(item.timestamp!)")
                 }
                 .onDelete(perform: deleteItems)
             }
@@ -76,15 +76,6 @@ struct ContentView: View {
         }
     }
 }
-
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
-
-
 
 
 //以降プレビュー
